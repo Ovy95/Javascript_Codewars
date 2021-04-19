@@ -23,7 +23,16 @@ describe("BuildTower", function() {
           '*****'
         ]);
       })
-       
+      it ("Given int value of 6. IT returns  [ * ,***,*****]",function() {
+        expect(tower.towerBuilder(6)).toEqual([
+          '     *     ', 
+          '    ***    ', 
+          '   *****   ', 
+          '  *******  ', 
+          ' ********* ', 
+          '***********',
+        ]);
+      })
 
   })
 

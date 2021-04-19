@@ -11,7 +11,7 @@ class BuildTower {
         spacers = (" ").repeat(nFloors - i);
         tower.push(spacers + materials + spacers);
       }
-
+      console.log(tower)
 
     return tower;
   }
