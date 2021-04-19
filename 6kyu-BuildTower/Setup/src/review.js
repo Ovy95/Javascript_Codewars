@@ -1,20 +1,21 @@
 class BuildTower {
 
-  towerBuilder (nFloors){
-    let tower = ['*']
+   towerBuilder(nFloors) {
+    
+    var materials = "";
+    var spacers = "";
+    var tower = [];
 
-    if (nFloors == 1){
-      return tower
-    }
-   
-    for (let index = 1; index < nFloors; index++) {
-      let materials = "*"
-      let levels = ""
-      levels += materials.repeat(index+2)
-    }
+      for (var i = 1; i <= nFloors; i++) {
+        materials = ("*").repeat((2 * i) - 1);
+        spacers = (" ").repeat(nFloors - i);
+        tower.push(spacers + materials + spacers);
+      }
 
-    return tower
+
+    return tower;
   }
+
 
 
 

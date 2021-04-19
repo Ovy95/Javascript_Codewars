@@ -13,7 +13,15 @@ describe("BuildTower", function() {
 
 
       it ("Given int value of 2. IT returns  [ * ,***]",function() {
-        expect(tower.towerBuilder(2)).toEqual(["*" ,"***"]);
+        expect(tower.towerBuilder(2)).toEqual([' * ','***']);
+      })
+
+      it ("Given int value of 3. IT returns  [ * ,***,*****]",function() {
+        expect(tower.towerBuilder(3)).toEqual([
+          '  *  ', 
+          ' *** ', 
+          '*****'
+        ]);
       })
        
 
