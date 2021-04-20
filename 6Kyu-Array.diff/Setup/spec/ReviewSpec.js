@@ -7,6 +7,7 @@ describe("ArrayDifference", function() {
   });
 
   describe('arrayDiff', function() {
+    
       it ("Given [], [4,5] the difference returned would be IT returns []",function() {
         expect(array.arrayDiff([],[4,5])).toEqual([]);
       })
@@ -22,7 +23,10 @@ describe("ArrayDifference", function() {
       it ("Given [1,2,3],[1,2] the difference returned would be IT returns [3]",function() {
         expect(array.arrayDiff([1,2,3],[1,2])).toEqual([3]);
       })
-     
+
+      it ("Given [1,2,2],[2] the difference returned would be IT returns [3]",function() {
+        expect(array.arrayDiff([1,2,2],[2])).toEqual([1]);
+      })
      
 
   })
