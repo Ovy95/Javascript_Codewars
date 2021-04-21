@@ -27,19 +27,27 @@ describe("ArrayDifference", function() {
       it ("Given [1,2,2],[2] the difference returned would be IT returns [3]",function() {
         expect(array.arrayDiff([1,2,2],[2])).toEqual([1]);
       })
-      it ("fails this",function() {
+      it ("given 1,2,2 and 1 returns values 2,2",function() {
         expect(array.arrayDiff([1,2,2],[1])).toEqual([2,2]);
       })
 
-      it ("Given really long array the difference returned would be IT returns [3]",function() {
-        expect(array.arrayDiff([-19,-4,-5, -8, 16, 2, -15, -9,15,15,13],[-5,-9,15,15,-4,-15,-19,2,-8])).toEqual([16, 13]);
-      })
-
-      it ("Given really long array the difference returned would be IT returns [3]",function() {
+      it ("Checks for negative values",function() {
         expect(array.arrayDiff([-1,-2,-3],[-2])).toEqual([-1,-3]);
       })
 
-      it ("Given really long array the difference returned would be IT returns [3]",function() {
+      it ("Checks a mix of negative and positive values",function() {
+        expect(array.arrayDiff([-1,-2,15,-2,-3],[-2,15,-2])).toEqual([-1,-3]);
+      })
+     
+      it ("Given really long array returns 16,13",function() {
+        expect(array.arrayDiff([-19,-4,-5, -8, 16, 2, -15, -9,15,15,13],[-5,-9,15,15,-4,-15,-19,2,-8])).toEqual([16, 13]);
+      })
+
+      it ("Checks for negative values",function() {
+        expect(array.arrayDiff([-1,-2,-3],[-2])).toEqual([-1,-3]);
+      })
+
+      it ("Checks a mix of negative and positive values",function() {
         expect(array.arrayDiff([-1,-2,15,-2,-3],[-2,15,-2])).toEqual([-1,-3]);
       })
      
