@@ -7,7 +7,7 @@ describe("ArrayDifference", function() {
   });
 
   describe('arrayDiff', function() {
-    
+
       it ("Given [], [4,5] the difference returned would be IT returns []",function() {
         expect(array.arrayDiff([],[4,5])).toEqual([]);
       })
@@ -26,6 +26,21 @@ describe("ArrayDifference", function() {
 
       it ("Given [1,2,2],[2] the difference returned would be IT returns [3]",function() {
         expect(array.arrayDiff([1,2,2],[2])).toEqual([1]);
+      })
+      it ("fails this",function() {
+        expect(array.arrayDiff([1,2,2],[1])).toEqual([2,2]);
+      })
+
+      it ("Given really long array the difference returned would be IT returns [3]",function() {
+        expect(array.arrayDiff([-19,-4,-5, -8, 16, 2, -15, -9,15,15,13],[-5,-9,15,15,-4,-15,-19,2,-8])).toEqual([16, 13]);
+      })
+
+      it ("Given really long array the difference returned would be IT returns [3]",function() {
+        expect(array.arrayDiff([-1,-2,-3],[-2])).toEqual([-1,-3]);
+      })
+
+      it ("Given really long array the difference returned would be IT returns [3]",function() {
+        expect(array.arrayDiff([-1,-2,15,-2,-3],[-2,15,-2])).toEqual([-1,-3]);
       })
      
 
