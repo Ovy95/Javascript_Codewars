@@ -8,10 +8,11 @@ describe("Meeting", function() {
 
   describe('sortNames', function() {
 
-    it ("Basic Hardcoded test returns single name in upperCase",function() {
-      expect(meeting.sortName("Jack Overton")).toEqual("JACK OVERTON");
+    it ("Basic Hardcoded test returns single name in upperCase with Surname first",function() {
+      expect(meeting.sortName("Jack:Overton;")).toEqual("(OVERTON, JACK)");
     })
-
+    
+    
 
 
   })
