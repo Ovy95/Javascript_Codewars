@@ -10,21 +10,11 @@ describe("CreditCardMask", function() {
         expect(masking.maskify("1")).toEqual("1");
       })
 
-      // it ("returns even",function() {
-      //   expect(masking.maskify("it cook")).toEqual("t ck");
-      // })
-      // it ("returns even",function() {
-      //   expect(masking.maskify("e")).toEqual("");
-      // })
-      // it ("returns even",function() {
-      //   expect(masking.maskify("a")).toEqual("");
-      // })
-      // it ("returns even",function() {
-      //   expect(masking.maskify("o")).toEqual("");
-      // })
-      // it ("returns even",function() {
-      //   expect(masking.maskify("u")).toEqual("");
-      // })
+      it ("returns even",function() {
+        expect(masking.maskify("12345")).toEqual("#2345");
+      })
+
+
       
   })
   
