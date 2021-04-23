@@ -8,12 +8,9 @@ class CreditCardMask {
     let maskingvalue = (detailsLength-4)
     cc = cc.slice(maskingvalue,detailsLength)
 
-    let mask = "#"
-    mask.repeat(maskingvalue)
-
-
-
-    return mask+cc
+    let maseddata = "#"
+    let encryption = maseddata.repeat(maskingvalue)
+    return encryption+cc
   }
 
 }
