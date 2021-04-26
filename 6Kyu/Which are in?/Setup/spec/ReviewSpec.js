@@ -16,6 +16,17 @@ describe("inArray", function() {
       expect(whichAre.filterArrays(["Gym"],["Gym"])).toEqual(["Gym"]);
     })
   })
+
+  describe('filterArrays, Arrays having a length of 2', function() {
+
+    it ("Returns matching single arrays",function() {
+      expect(whichAre.filterArrays(["ice","xyz"],["mice","monkeys"])).toEqual(["ice"]);
+    })
+    it ("given air and berry returns both as they match up",function() {
+      expect(whichAre.filterArrays(["air","berry"],["stairs","blueberry"])).toEqual(["air","berry"]);
+    })
+
+  })
   
 
 });
