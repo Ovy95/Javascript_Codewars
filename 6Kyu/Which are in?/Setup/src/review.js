@@ -15,6 +15,6 @@ class InArray {
             matches.push(array1[index])
          }
       }
-      return matches
+      return matches.sort()
    }
 }
