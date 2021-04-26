@@ -27,6 +27,19 @@ describe("inArray", function() {
     })
 
   })
+  describe('filterArrays,Codewars  tests', function() {
+
+    it ("returns live, strong",function() {
+      expect(whichAre.filterArrays(["xyz", "live", "strong"],["lively", "alive", "harp", "sharp", "armstrong"])).toEqual(["live", "strong"]);
+    })
+    it ("No matches returns empty array",function() {
+      expect(whichAre.filterArrays(["tarp", "mice", "bull"],["lively", "alive", "harp", "sharp", "armstrong"])).toEqual([]);
+    })
+    it ("all matching returns them in correct order",function() {
+      expect(whichAre.filterArrays(["live", "strong", "arp"],["live", "strong", "arp"])).toEqual(["arp", "live", "strong"]);
+    })
+
+  })
   
   
 
