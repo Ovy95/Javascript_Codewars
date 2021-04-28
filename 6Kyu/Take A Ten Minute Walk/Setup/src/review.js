@@ -1,7 +1,9 @@
 class TenMinuteWalk {
 
    routePlanner(route) {
-      
-      return false
+      if(route.length != 10){
+         return false
+      }
+
    }
 }
