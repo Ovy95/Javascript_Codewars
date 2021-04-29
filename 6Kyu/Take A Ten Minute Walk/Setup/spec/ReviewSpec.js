@@ -21,11 +21,7 @@ describe("TenMinuteWalk", function() {
     it ("returns false if length is less then 10",function() {
       expect(walk.routePlanner(['w','w','w','w','w','e','e','e','e','e'])).toEqual(true);
     })
-    
-    
+  
   })
-
- 
-
 
 });
