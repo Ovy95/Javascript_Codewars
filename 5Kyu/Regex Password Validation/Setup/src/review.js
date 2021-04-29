@@ -3,7 +3,7 @@ class Password {
    validation(password) {
 
 
-    return /([0-9]{5})\w+/g.test(password);
+    return /(?=.*[a-z])(?=.*[0-9])(?=.{6,})/g.test(password);
  
    }
 
