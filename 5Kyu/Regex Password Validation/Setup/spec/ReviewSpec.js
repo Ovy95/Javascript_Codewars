@@ -20,5 +20,18 @@ describe("ArrayDifference", function() {
 
   });
 
+  describe('Edge case Codewars tests', function() {
+
+    it ("Fails test due to period in password value",function() {
+      expect(password.validation("a2.d412")).toEqual(false);
+    })
+    
+    it ("Fails test due to special characters",function() {
+      expect(password.validation("!fdjn345")).toEqual(false);
+    })
+  });
+
+
+
 
 })
