@@ -1,7 +1,10 @@
 class HashMaker {
 
    stringToHash(stringValue) {
-     
+     if (stringValue===""){
+       return {}
+     }
+
     let keyValueArray = []
      let stringArray = stringValue.split(", ")
      for (let index = 0; index < stringArray.length; index++) {
