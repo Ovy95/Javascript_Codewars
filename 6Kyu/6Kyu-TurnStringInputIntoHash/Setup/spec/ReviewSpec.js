@@ -9,7 +9,10 @@ describe("Hash", function() {
   describe('HashMaker', function() {
 
       it ("Hardcoded return object",function() {
-        expect(input.stringToHash("a=1")).toEqual({a:1});
+        expect(input.stringToHash("a=1")).toEqual({'a':1});
+      })
+      it ("codewars test return  correct object",function() {
+        expect(input.stringToHash("a=1, b=2, c=3, d=4")).toEqual({'a':1,'b':2,'c':3,'d':4});
       })
 
   })
