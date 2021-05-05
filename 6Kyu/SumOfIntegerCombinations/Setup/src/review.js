@@ -1,9 +1,17 @@
 class Combinations {
 
    combos(array, numberToMatch) {
+      let matches = 0
+      for (let index = 0; index < array.length; index++) {
+         // index is 0 
+         let lengthTimes = array[index] * array.length
 
-
-     return 1
+         if(lengthTimes === numberToMatch){
+            matches++
+         }
+         
+      }
+     return matches
 
    }
 }
