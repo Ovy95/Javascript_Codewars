@@ -15,6 +15,11 @@ describe("Combinations", function() {
       expect(find.combos([1,2],1)).toEqual(1);
     })
 
+    it ("3 values in array find 1 ",function() {
+      expect(find.combos([1,2,3],2)).toEqual(2);
+    })
+    
+
   })
 
 });
