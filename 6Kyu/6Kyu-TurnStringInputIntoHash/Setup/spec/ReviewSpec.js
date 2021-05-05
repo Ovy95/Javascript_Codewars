@@ -21,8 +21,4 @@ describe("Hash", function() {
 
   })
 
-
- 
-
-
 });
