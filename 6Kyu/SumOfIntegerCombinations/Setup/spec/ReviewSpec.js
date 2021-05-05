@@ -8,8 +8,11 @@ describe("Combinations", function() {
 
   describe('combos', function() {
 
-    it ("HardedFirst test checking setup, basic test",function() {
+    it ("Given [1] find 1 passing test",function() {
       expect(find.combos([1],1)).toEqual(1);
+    })
+    it ("2 values in array find 1 ",function() {
+      expect(find.combos([1,2],1)).toEqual(1);
     })
 
   })
