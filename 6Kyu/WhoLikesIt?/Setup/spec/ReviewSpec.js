@@ -15,6 +15,11 @@ describe("ArrayDifference", function() {
         expect(jackBook.likes(["Peter"])).toEqual("Peter likes this");
       })
 
+      it ("Given ['Jacob', 'Alex'] // Returns - Jacob and Alex like this",function() {
+        expect(jackBook.likes(['Jacob', 'Alex'])).toEqual("Jacob and Alex like this");
+      })
+
+
   })
 
 });
