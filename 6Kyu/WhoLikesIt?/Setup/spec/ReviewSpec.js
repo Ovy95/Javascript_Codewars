@@ -22,6 +22,9 @@ describe("ArrayDifference", function() {
       it ("Given ['Max', 'John', 'Mark'] // Returns - Max, John and Mark like this",function() {
         expect(jackBook.likes(['Max', 'John', 'Mark'])).toEqual('Max, John and Mark like this');
       })
+      it ("Given ['Alex', 'Jacob', 'Mark', 'Max'] // Returns - Alex, Jacob and 2 others like this",function() {
+        expect(jackBook.likes(['Alex', 'Jacob', 'Mark', 'Max'])).toEqual('Alex, Jacob and 2 others like this');
+      })
 
   })
 
