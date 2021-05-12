@@ -26,6 +26,16 @@ describe("EqualValues", function() {
     })
 
   })
+  describe('equalValues, Checking Array values values', function() {
+
+    it ("Simple test for Array values returns false",function() {
+      expect(equalValues.areEqual(['Hello'], ['Goodbye'])).toEqual(false);
+    })
+    it ("Simple test for Array values returns true",function() {
+      expect(equalValues.areEqual(['Hello'], ['Hello'])).toEqual(true);
+    })
+
+  })
   
 
 });
