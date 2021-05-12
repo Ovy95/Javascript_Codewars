@@ -36,6 +36,26 @@ describe("EqualValues", function() {
     })
 
   })
+
+  describe('equalValues, CodeWars tests', function() {
+
+    it ("1) CodeWars tests",function() {
+      expect(equalValues.areEqual([{a:3},{b:4}],[{a:'3'},{b:'4'}])).toEqual(false);
+    })
+    it ("2) CodeWars tests",function() {
+      expect(equalValues.areEqual({a:[2,3],b:[4]},{b:[4],a:[2,3]})).toEqual(true);
+    })
+    it ("3) CodeWars tests",function() {
+      expect(equalValues.areEqual({adam:3, laura:4}, {laura:4, adam:3})).toEqual(true);
+    })
+    it ("4) CodeWars tests",function() {
+      expect(equalValues.areEqual({adam:3, laura:4, maisie:2}, {adam:3, laura:4})).toEqual(false);
+    })
+    it ("5) CodeWars tests",function() {
+      expect(equalValues.areEqual({a:3},{b:4},{b:3},{a:4})).toEqual(false);
+    })
+
+  })
   
 
 });
