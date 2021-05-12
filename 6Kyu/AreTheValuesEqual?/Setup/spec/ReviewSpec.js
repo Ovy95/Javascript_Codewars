@@ -16,6 +16,16 @@ describe("EqualValues", function() {
     })
 
   })
+  describe('equalValues, Checking Object values values', function() {
+
+    it ("Simple test for Object values returns false",function() {
+      expect(equalValues.areEqual({['Hello']:"Jack"}, {['Goodbye']:"Jack"})).toEqual(false);
+    })
+    it ("Simple test for Object values returns true",function() {
+      expect(equalValues.areEqual({'Hello':"Jack"}, {'Hello':"Jack"})).toEqual(true);
+    })
+
+  })
   
 
 });

@@ -2,10 +2,7 @@ class EqualValues {
 
    areEqual(value1,value2 ){
 
-      if (value1 !== value2){
-         return false
-      }
-      return true
+    return  JSON.stringify(value1) === JSON.stringify(value2);
     
    }
 }
