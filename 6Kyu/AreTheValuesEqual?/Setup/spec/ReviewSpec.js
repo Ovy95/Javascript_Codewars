@@ -6,10 +6,13 @@ describe("EqualValues", function() {
     equalValues = new EqualValues();
   });
 
-  describe('equalValues', function() {
+  describe('equalValues, Checking strings', function() {
 
-    it ("hardcoded true returned passed first test",function() {
-      expect(equalValues.areEqual({},{})).toEqual(true);
+    it ("Simple test for strings returns false",function() {
+      expect(equalValues.areEqual('Hello', 'Goodbye')).toEqual(false);
+    })
+    it ("Simple test for strings returns true",function() {
+      expect(equalValues.areEqual('Hello', 'Hello' )).toEqual(true);
     })
 
   })
