@@ -1,8 +1,7 @@
 class StringChecker {
 
    incrementString(password) {
-      return "foo1"
- 
+      return password+ 1
    }
 
 
