@@ -14,8 +14,15 @@ describe("StringChecker", function() {
       it ("Empty String adds 1 to value",function() {
         expect(stringChecker.incrementString("")).toEqual("1");
       })
+
+      it ("Testing string abc1 should equal abc2",function() {
+        expect(stringChecker.incrementString("abc1")).toEqual("abc2");
+      })
+      it ("Testing string jack99 should equal jack100",function() {
+        expect(stringChecker.incrementString("jack99")).toEqual("jack100");
+      })
       
-     
+  
 
   });
 
