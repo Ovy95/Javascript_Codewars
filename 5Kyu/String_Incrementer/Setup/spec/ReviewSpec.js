@@ -21,6 +21,11 @@ describe("StringChecker", function() {
       it ("Testing string jack99 should equal jack100",function() {
         expect(stringChecker.incrementString("jack99")).toEqual("jack100");
       })
+      it ("Testing string jack99 should equal jack100",function() {
+        expect(stringChecker.incrementString("foobar000")).toEqual("foobar001");     
+      })
+
+
       
   
 

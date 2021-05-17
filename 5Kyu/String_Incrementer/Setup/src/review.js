@@ -2,18 +2,14 @@ class StringChecker {
 
    incrementString(value) {
 
-   let matches = value.match(/(\d+)/);
-    if (matches == null){
-         return value +"1"
-   }
-
-   if (value.endsWith(matches[0]) ==  true) {
-      value = value.split(matches[0])
-      let increatementvalue = parseInt(matches[0])
-      increatementvalue++
-      value = value[0]+String(increatementvalue)
-   }
-
-      return value
+      var str = value.replace(/[0-9]/gi,'');
+      var num = value.replace(/[^0-9]/gi,'');
+      num++;
+      var t = str + num;
+      if((value.length - t.length) ==2)
+        str +='00';
+      if((value.length - t.length) ==1)
+        str +='0';
+      return str+num;
    }
 }  
