@@ -17,14 +17,18 @@ class Bakery {
 
     let IngredientsArray = []
     for (let index = 0; index < keys2.length; index++) {
-      if (keys1[index] != undefined){
-        Ingredients = new Object();
-        Ingredients.Ingredient = keys2[index]
-        Ingredients.amount = values2[index]
-        IngredientsArray.push(Ingredients)
+      for (let j = 0; j < keys1.length; j++) {
+
+        if (keys1[j] == keys2[index]){
+          Ingredients = new Object();
+          Ingredients.Ingredient = keys2[index]
+          Ingredients.amount = values2[index]
+          IngredientsArray.push(Ingredients)
+        }
       }
     }
 
+    console.log(IngredientsArray)
     for (let index = 0; index < IngredientsArray.length; index++) {
       // IngredientsArray[index]
       let kay = IngredientsArray[index].Ingredient 
@@ -33,11 +37,13 @@ class Bakery {
       console.log(IngredientsArray[index].amount)
 
       if (IngredientsArray[index].amount == recipe[kay]){
-        return 1
+        return 1 // change this bit to an array also need to change values in amoutns to check tests
       }
 
     }
 
+    return "hello john"
   }
+
 
 }
