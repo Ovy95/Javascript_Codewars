@@ -21,7 +21,7 @@ describe("Bakery", function() {
 
 
       it ("Should return one as values match",function() {
-        expect(bakery.cakeMaker({milk: 500,chocolateDust:500},{milk: 25, chocolateDust: 500 })).toEqual(1);
+        expect(bakery.cakeMaker({milk: 500,chocolateDust:500},{milk: 500, chocolateDust: 500 })).toEqual(1);
       })
 
 

@@ -28,21 +28,18 @@ class Bakery {
       }
     }
 
-    console.log(IngredientsArray)
+   let  recipeAmount = []
     for (let index = 0; index < IngredientsArray.length; index++) {
       // IngredientsArray[index]
       let kay = IngredientsArray[index].Ingredient 
       console.log(kay)
       console.log(recipe[kay])
-      console.log(IngredientsArray[index].amount)
-
-      if (IngredientsArray[index].amount == recipe[kay]){
-        return 1 // change this bit to an array also need to change values in amoutns to check tests
-      }
-
+      // console.log(IngredientsArray[index].amount)
+      let amount = IngredientsArray[index].amount / recipe[kay]
+      recipeAmount.push(amount)
     }
 
-    return "hello john"
+    return Math.min(...recipeAmount)
   }
 
 
