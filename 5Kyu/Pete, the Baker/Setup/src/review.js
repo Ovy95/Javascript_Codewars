@@ -31,12 +31,10 @@ class Bakery {
    let  recipeAmount = []
     for (let index = 0; index < IngredientsArray.length; index++) {
       // IngredientsArray[index]
-      let kay = IngredientsArray[index].Ingredient 
-      console.log(kay)
-      console.log(recipe[kay])
-      // console.log(IngredientsArray[index].amount)
-      let amount = IngredientsArray[index].amount / recipe[kay]
-      recipeAmount.push(amount)
+      let key = IngredientsArray[index].Ingredient 
+
+      let amount = IngredientsArray[index].amount / recipe[key]
+      recipeAmount.push(Math.floor(amount))
     }
 
     return Math.min(...recipeAmount)
