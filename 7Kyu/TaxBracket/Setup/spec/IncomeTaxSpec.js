@@ -18,6 +18,17 @@ describe("TaxCalculations", function() {
     it ("Personal Allowance returns 0",function() {
       expect(taxCalculations.incomeTax(12570)).toEqual(0);
     })
+
+
+    it ("BasicRateMax returns 1",function() {
+      expect(taxCalculations.BasicRate(12571)).toEqual(0.2);
+    })
+    it ("BasicRateMax returns 3486.00",function() {
+      expect(taxCalculations.BasicRate(30000)).toEqual(3486.00);
+    })
+    it ("BasicRateMax returns 7540.00",function() {
+      expect(taxCalculations.BasicRate(50270)).toEqual(7540.00);
+    })
    })
 });
 
