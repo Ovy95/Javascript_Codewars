@@ -29,7 +29,6 @@ describe("TaxCalculator", function() {
       })
       
   })
-  
 
 });
 
