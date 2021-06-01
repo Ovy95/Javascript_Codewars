@@ -29,7 +29,7 @@ describe("TaxCalculations", function() {
   })
 
   describe('HigherRate Function tests checkes working out the total amount of Income tax to be payed on salary ', function() {
-  fit ("Total Income tax to pay would return  return 7540.40",function() {
+  it ("Total Income tax to pay would return  return 7540.40",function() {
     expect(taxCalculations.HigherRate(50271)).toEqual(7540.40);
   })
 
