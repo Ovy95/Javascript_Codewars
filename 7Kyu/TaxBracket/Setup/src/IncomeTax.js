@@ -34,6 +34,22 @@ class TaxCalculations {
       let totalTaxableIncome = HigherRateTax + basicRateTax
       return totalTaxableIncome
    }
+   aboveHundredK(salary){
+      let paCap = 125140
+      if (salary >= paCap){
+         return 0
+      }
+      
+      salary = salary - 100000
+      let allowance = salary / 2
+      let newAllowance =  this.tax.brackets.PersonalAllowanceMax - allowance
+      return newAllowance
+   }
+
+
+   AdditionalRate(salary){
+      //45%
+   }
 
    // Next steps for this are to create another Method which is Max Rate so Create the Higherrate, Also going to be running 
    // into the edge case of not having a personal allowance on values 

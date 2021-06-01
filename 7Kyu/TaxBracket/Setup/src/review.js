@@ -7,7 +7,6 @@ class TaxCalculator {
     HigherRate:         {Max:150000,Percentage:"40%"},
     AdditionalRate:     {Percentage:"45%"}} 
 
-
     if (salary <= brackets.PersonalAllowance.Max){
       return brackets.PersonalAllowance.Percentage
     }
@@ -21,9 +20,6 @@ class TaxCalculator {
       return brackets.AdditionalRate.Percentage
     }
   }
-
- 
-
 }
 
 

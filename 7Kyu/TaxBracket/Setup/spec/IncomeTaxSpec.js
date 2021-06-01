@@ -35,8 +35,20 @@ describe("TaxCalculations", function() {
   it ("Total Income tax to pay would return  return 7540.40",function() {
     expect(taxCalculations.HigherRate(50271)).toEqual(7540.40);
   })
-  
+
   });
+  describe('Returning the new Personal Allowance on salarys above 100k', function() {
+    fit ("Given 100002 returns 12569",function() {
+      expect(taxCalculations.aboveHundredK(100002)).toEqual(12569);
+    })
+    fit ("Given 100,003 returns 12568.50",function() {
+      expect(taxCalculations.aboveHundredK(100003)).toEqual(12568.50);
+    })
+    fit ("Given 125140 returns 0 ",function() {
+      expect(taxCalculations.aboveHundredK(125140)).toEqual(0);
+    })
+    
+    });
 
 })
 
