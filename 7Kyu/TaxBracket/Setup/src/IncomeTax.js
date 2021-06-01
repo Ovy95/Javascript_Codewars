@@ -26,20 +26,26 @@ class TaxCalculations {
    }
 
    HigherRate(salary) {
-      salary = (salary - this.tax.brackets.PersonalAllowanceMax)
+      console.log(salary)
+      let personalAllowance
+      if (salary > 100000){
+         personalAllowance = this.aboveHundredK(salary)
+      }else{
+         personalAllowance = this.tax.brackets.PersonalAllowanceMax
+      }
+      salary = (salary - personalAllowance)
       let secondBanding = (this.tax.brackets.BasicRateMax - this.tax.brackets.PersonalAllowanceMax)
       let basicRateTax = (secondBanding * .20)
       secondBanding = salary - secondBanding
       let HigherRateTax = (secondBanding * .40);
-      let totalTaxableIncome = HigherRateTax + basicRateTax
-      return totalTaxableIncome
+      let totalIncomeTax = HigherRateTax + basicRateTax
+      return totalIncomeTax
    }
    aboveHundredK(salary){
       let paCap = 125140
       if (salary >= paCap){
          return 0
       }
-      
       salary = salary - 100000
       let allowance = salary / 2
       let newAllowance =  this.tax.brackets.PersonalAllowanceMax - allowance

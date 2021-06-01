@@ -29,22 +29,30 @@ describe("TaxCalculations", function() {
   })
 
   describe('HigherRate Function tests checkes working out the total amount of Income tax to be payed on salary ', function() {
-  it ("Total Income tax to pay would return 3486.00",function() {
-    expect(taxCalculations.HigherRate(70000)).toEqual(15432.00);
-  })
-  it ("Total Income tax to pay would return  return 7540.40",function() {
+  fit ("Total Income tax to pay would return  return 7540.40",function() {
     expect(taxCalculations.HigherRate(50271)).toEqual(7540.40);
   })
 
+  it ("Total Income tax to pay would return  return 27432.00",function() {
+    expect(taxCalculations.HigherRate(100000)).toEqual(27432.00);
+  })
+  
+  it ("Total Income tax to pay would return  return 42516.00",function() {
+    expect(taxCalculations.HigherRate(125140)).toEqual(42516.00);
+  })
+  
+  it ("Total Income tax to pay would return  return 52460.00",function() {
+    expect(taxCalculations.HigherRate(150000)).toEqual(52460.00);
+  })
   });
   describe('Returning the new Personal Allowance on salarys above 100k', function() {
-    fit ("Given 100002 returns 12569",function() {
+    it ("Given 100002 returns 12569",function() {
       expect(taxCalculations.aboveHundredK(100002)).toEqual(12569);
     })
-    fit ("Given 100,003 returns 12568.50",function() {
+    it ("Given 100,003 returns 12568.50",function() {
       expect(taxCalculations.aboveHundredK(100003)).toEqual(12568.50);
     })
-    fit ("Given 125140 returns 0 ",function() {
+    it ("Given 125140 returns 0 ",function() {
       expect(taxCalculations.aboveHundredK(125140)).toEqual(0);
     })
     
