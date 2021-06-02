@@ -5,7 +5,7 @@ describe("NationInsuranceTax", function() {
     taxCalculations = new NationInsuranceTax();
   });
 
-  describe('Natational Insurance FUNCTION tests for threshold checks', function() {
+  describe('Natational Insurance FUNCTION totalIncomeTax tests for all three cases', function() {
     it ("threshold check returns 0",function() {
       expect(taxCalculations.totalIncomeTax(0)).toEqual(0);
     })
@@ -13,8 +13,11 @@ describe("NationInsuranceTax", function() {
       expect(taxCalculations.totalIncomeTax(9568)).toEqual(0);
     })
 
-    it ("Given £1 over threshold returns 0.12",function() {
-      expect(taxCalculations.totalIncomeTax(9569)).toEqual(0.12);
+    it ("Given 50k over (In basic range) returns 4851.84",function() {
+      expect(taxCalculations.totalIncomeTax(50000)).toEqual(4851.84);
+    })
+    it ("Given 200k over (Outside basic range) returns 7878.84",function() {
+      expect(taxCalculations.totalIncomeTax(200000)).toEqual(7878.84);
     })
 
 

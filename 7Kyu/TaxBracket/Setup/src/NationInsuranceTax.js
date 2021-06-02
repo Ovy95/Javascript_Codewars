@@ -12,11 +12,17 @@ class NationInsuranceTax {
           taxToPay = this.BasicRatemin(salary)
           return taxToPay
         }
+
+        if (salary > this.NationInsuranceTax.Class1Rates.BasicRateMax){
+          taxToPay = this.AboveBasicRate(salary)
+          return taxToPay
+        }
       }
 
       BasicRatemin(salary){
         let taxableincome = (salary - this.NationInsuranceTax.Class1Rates.threshold)
         taxableincome = (taxableincome * .12);
+
         return taxableincome
       }
 
@@ -24,7 +30,7 @@ class NationInsuranceTax {
         let firstIncomeTax = this.BasicRatemin(this.NationInsuranceTax.Class1Rates.BasicRateMax)
         let taxableincome = (salary - this.NationInsuranceTax.Class1Rates.BasicRateMax)
         taxableincome = (taxableincome * .02) + firstIncomeTax;
-        
+
         return taxableincome
       }
 
