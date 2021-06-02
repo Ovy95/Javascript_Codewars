@@ -20,6 +20,14 @@ class NationInsuranceTax {
         return taxableincome
       }
 
+      AboveBasicRate(salary){
+        let firstIncomeTax = this.BasicRatemin(this.NationInsuranceTax.Class1Rates.BasicRateMax)
+        let taxableincome = (salary - this.NationInsuranceTax.Class1Rates.BasicRateMax)
+        taxableincome = (taxableincome * .02) + firstIncomeTax;
+        
+        return taxableincome
+      }
+
 }
 
 

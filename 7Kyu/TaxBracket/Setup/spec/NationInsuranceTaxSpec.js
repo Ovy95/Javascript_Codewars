@@ -29,6 +29,16 @@ describe("NationInsuranceTax", function() {
     })
   })
 
+  describe('Natational Insurance FUNCTION AboveBasicRate testing 60k and 100k', function() {
+    it ("Given 60,000 returns 5078.84",function() {
+      expect(taxCalculations.AboveBasicRate(60000)).toEqual(5078.84);
+    })
+    it ("Given 100,000 returns 5878.84",function() {
+      expect(taxCalculations.AboveBasicRate(100000)).toEqual(5878.84);
+    })
+    
+  })
+
 
 })
 
