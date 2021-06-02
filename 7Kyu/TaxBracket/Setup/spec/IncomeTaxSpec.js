@@ -58,5 +58,13 @@ describe("TaxCalculations", function() {
     
     });
 
+    describe('Returning the new Personal Allowance on salarys above 100k', function() {
+      it ("Given 100002 returns 12569",function() {
+        expect(taxCalculations.HigherRate(150000)).toEqual(52460.00);
+      })
+
+      
+      });
+
 })
 

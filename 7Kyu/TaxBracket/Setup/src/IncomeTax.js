@@ -53,6 +53,16 @@ class TaxCalculations {
 
 
    AdditionalRate(salary){
+      let personalAllowance = this.aboveHundredK(salary)
+      salary = (salary - personalAllowance)
+      //37.7400
+      let secondBanding = (this.tax.brackets.BasicRateMax - this.tax.brackets.PersonalAllowanceMax)
+      let basicRateTax = (secondBanding * .20)
+      secondBanding = salary - secondBanding
+      let HigherRateTax = (secondBanding * .40);
+      
+      let totalIncomeTax = HigherRateTax + basicRateTax
+      return totalIncomeTax
       //45%
    }
 
