@@ -1,13 +1,13 @@
 describe("ClassName", function() {
-  var review;
+  var oddInts;
 
   beforeEach (function () {
-    review = new ClassName();
+    oddInts = new OddInts();
   });
 
-  describe('functionName', function() {
-      it ("",function() {
-        expect(review.functionName("")).toEqual("");
+  describe('FilterArray Function 1 value', function() {
+      it ("hardCoded test passing",function() {
+        expect(oddInts.filterArray([1])).toEqual(1);
       })
       
   })

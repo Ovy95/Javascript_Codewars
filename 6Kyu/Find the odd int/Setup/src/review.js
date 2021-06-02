@@ -1,7 +1,7 @@
-class ClassName {
+class OddInts {
 
-  functionName(){
-  return ""
+  filterArray(array){
+    return array[0]
   }
 
 }
