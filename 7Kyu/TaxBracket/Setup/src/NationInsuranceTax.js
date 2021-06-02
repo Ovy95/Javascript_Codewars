@@ -8,12 +8,17 @@ class NationInsuranceTax {
         if (salary <= this.NationInsuranceTax.Class1Rates.threshold){
           return taxToPay
         }
-
-
+        if (salary <= this.NationInsuranceTax.Class1Rates.BasicRateMax){
+          taxToPay = this.BasicRatemin(salary)
+          return taxToPay
+        }
       }
-  
 
-
+      BasicRatemin(salary){
+        let taxableincome = (salary - this.NationInsuranceTax.Class1Rates.threshold)
+        taxableincome = (taxableincome * .12);
+        return taxableincome
+      }
 
 }
 
