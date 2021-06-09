@@ -12,6 +12,10 @@ describe("Dubstep Class", function() {
       it ("Return 'A M' given AWUBMWUB",function() {
         expect(dubstep.lyrics("AWUBMWUB")).toEqual("A M");
       })
+
+      it ("Return 'A M' given AWUBMWUB",function() {
+        expect(dubstep.lyrics("WUBAWUBBWUBCWUB")).toEqual("A B C")
+      })
       
   })
   
