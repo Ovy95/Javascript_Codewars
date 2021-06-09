@@ -1,7 +1,9 @@
 class Dubstep {
 
   lyrics(song){
-  return ""
+    let x = song.split('WUB')
+    x.splice(-1,1)
+    return x = x.join(' ')
   }
 
 }
