@@ -1,11 +1,10 @@
 class Dubstep {
 
   lyrics(song){
-    let x = song.split('WUB')
-    x = x.join(' ')
-
-
-    return x = x.trim()
+    return song.split('WUB').join('').split('').join(' ')
+    // x = x.join('')
+    // x = x.split('').join(' ')
+    return x
   }
 
 }
